@@ -1,0 +1,8 @@
+---
+applications:
+  - name: trial
+    docker:
+      image: ambalavibha/trial
+    memory: 256M
+    instances: 1
+
