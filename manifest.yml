@@ -1,9 +1,11 @@
+---
 applications:
   - name: trial
     memory: 256M
     instances: 1
-    buildpacks:
+    disk_quota: 512M
+    random-route: true
+    buildpack:
       - nodejs_buildpack
-    path: .
-    routes:
-      - route: trial.cfapps.us10-001.hana.ondemand.com
+    docker:
+      image: nodeimage
