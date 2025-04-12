@@ -1,8 +1,9 @@
----
 applications:
   - name: trial
-    docker:
-      image: ambalavibha/trial
     memory: 256M
     instances: 1
-
+    buildpacks:
+      - nodejs_buildpack
+    path: .
+    routes:
+      - route: trial.cfapps.us10-001.hana.ondemand.com
